@@ -42,7 +42,7 @@ section {
 
 #home {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
 }
 
 #home h2 {
@@ -54,24 +54,6 @@ section {
 #home p {
     font-size: 20px;
     color: #aaaaaa;
-}
-
-#home button {
-    width: 150px;
-    padding: 10px;
-    margin-top: 20px;
-    border: none; 
-    border-radius: 5px;
-    background-color: white;
-    color: #121212;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#home button:hover {
-    transform: scale(1.05);
-    background-color: #dddddd;
 }
 
 .skill-container {
