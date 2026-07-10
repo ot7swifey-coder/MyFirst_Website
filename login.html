@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="login-container">
@@ -18,11 +19,12 @@
                 <input type="email" id="email" placeholder="Enter your Email">
             </div>
 
-            <div class="input-group" style="position: relative;">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your Password">
-                <span id="togglePassword" style="position: absolute; right: 15px; bottom: 10px; cursor: pointer; font-size: 18px;">👁️</span>
-            </div>
+            <!-- Updated Password Input and Icon -->
+    <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your Password">
+        <i class="fa-solid fa-eye" id="togglePassword"></i>
+    </div>
 
             <button type="submit" class="login-btn">Login</button>
         </form>
@@ -42,15 +44,15 @@
         const togglePassword = document.getElementById('togglePassword');
 
         // ====== LOGIC 1: Show/Hide Password ======
-        togglePassword.addEventListener('click', function () {
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                togglePassword.textContent = '🔒'; // Password dikhne par lock icon
-            } else {
-                passwordInput.type = 'password';
-                togglePassword.textContent = '👁️'; // Wapas eye icon
-            }
-        });
+    togglePassword.addEventListener('click', function () {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+        this.className = 'fa-solid fa-eye-slash';
+    } else {
+        passwordInput.type = 'password';
+        this.className = 'fa-solid fa-eye';
+    }
+    });
 
         // ====== LOGIC 2: Empty Fields Check (Validation) ======
         loginForm.addEventListener('submit', function (event) {
