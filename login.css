@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Fixed: 'hv' se badal kar 'vh' kar diya taake perfectly center ho */
+    height: 100vh; 
 }
 
 .login-container {
@@ -35,7 +35,7 @@ body {
 .input-group {
     text-align: left;
     margin-bottom: 20px;
-    position: relative; /* Naya: Taake iske andar eye icon sahi jagah fit ho sake */
+    position: relative; 
 }
 
 .input-group label {
@@ -48,7 +48,7 @@ body {
 .input-group input {
     width: 100%;
     padding: 12px;
-    padding-right: 40px; /* Naya: Right side se thodi jagah chori taake text eye icon ke peeche na chupe */
+    padding-right: 40px; 
     background-color: #2a2a2a;
     border: 1px solid #444;
     border-radius: 6px;
@@ -64,20 +64,23 @@ body {
     background-color: #333;
 }
 
-/* Naya: Eye icon ko input field ke andar styling dene ke liye */
 #togglePassword {
     position: absolute;
-    right: 12px;
-    bottom: 10px; /* Is se icon vertical center ho jayega */
+    right: 15px;
+    bottom: 14px; 
     cursor: pointer;
-    font-size: 18px;
-    user-select: none; /* Taake baar baar click karne par icon select na ho */
+    font-size: 14px; 
+    color: #888; 
+    transition: 0.2s;
 }
 
+#togglePassword:hover {
+    color: #ffffff;
+}
 .login-btn {    
     width: 100%;
     padding: 12px;
-    background-color: #ffffff; /* Fixed: background-color missing thi jahan border-color thi */
+    background-color: #ffffff; 
     color: #121212;
     border: none;
     border-radius: 6px;
